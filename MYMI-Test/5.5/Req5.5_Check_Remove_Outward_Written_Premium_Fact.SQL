@@ -1,0 +1,3 @@
+--Requirement 5.5 ---> Check the below table/view exists or not. Both should not exists 
+select * from information_schema.tables where table_name in ('OUTW_Written_Premium_Control','OUTW_Written_Premium_Extract') and table_schema = 'staging'
+select * from information_schema.view_table_usage where table_name in ('OUTW_Written_Premium_Control','OUTW_Written_Premium_Extract') and view_schema = 'Legatum'
